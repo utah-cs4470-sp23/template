@@ -27,8 +27,6 @@ else ifeq (./compiler.java,$(source_files))
 	@$(MAKE) compile-java
 else ifeq (./compiler.py,$(source_files))
 	@$(MAKE) compile-py
-else ifeq (,$(source_files))
-	$(error Cannot find C++, Java, or Python source code)
 else
 	$(error Please select exactly one of C++, Java, or Python source code)
 endif
@@ -46,8 +44,6 @@ else ifeq (./compiler.java,$(source_files))
 	@$(MAKE) run-java
 else ifeq (./compiler.py,$(source_files))
 	@$(MAKE) run-py
-else ifeq (,$(source_files))
-	$(error Cannot find C++, Java, or Python source code)
 else
 	$(error Please select exactly one of C++, Java, or Python source code)
 endif
@@ -61,3 +57,6 @@ run-java: compiler.class
 
 run-py:
 	$(PYTHON) compiler.py $(TEST)
+
+clean:
+	rm -f a.out compiler.o compiler.class compiler.pyc
