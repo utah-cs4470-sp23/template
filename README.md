@@ -13,15 +13,17 @@ Picking a Language
 This repository supports work in C++ (version 20), Java (15), or
 Python (3.9). It correspondingly includes starter files
 `compiler.cpp`, `compiler.java`, and `compiler.py`. Each starter file
-compiles and runs, doing nothing and returning successfully.
+compiles and runs, doing nothing and returning successfully. For each
+language there is also a Makefile: `Makefile_cpp`, `Makefile_java`,
+and `Makefile_py`.
 
-To pick your language, delete the other two starter files. If you want
-to use a language other than C++, Java, or Python, contact the
-instructors. Keep in mind that using another language will be more
-work, and you will not be able to receive the same level of instructor
-support. Compilers is a complicated subject. It is abjectly
-irresponsible to try to learn a new language at the same time as you
-learn compilers.
+To pick your language, delete the starter files for the other two
+languages. If you want to use a language other than C++, Java, or
+Python, contact the instructors. Keep in mind that using another
+language will be more work, and you will not be able to receive the
+same level of instructor support. Compilers is a complicated subject.
+It is abjectly irresponsible to try to learn a new language at the
+same time as you learn compilers.
 
 Compiling your Compiler
 -----------------------
@@ -32,20 +34,9 @@ compiler by running:
 
     make compile
 
-This should complete without errors. If you get the following error
-
-    Makefile:24: *** Cannot find Python, C++, or Java source code.  Stop.
-
-then that means you deleted or renamed all of the source files. Please
-keep at least one of `compiler.cpp`, `compiler.java`, or `compiler.py`
-in the directory. If instead you get the following error
-
-    Makefile:26: *** Please select exactly one of C++, Java, or Python source code.  Stop.
-
-then that means you didn't delete the two source files corresponding
-to languages you're not using. If you get some other error, you likely
-need to install one of `g++`, `javac`/`java`, or `python3`, or to add
-them to your system PATH.
+This should complete without errors. If you get an error, you likely
+need to install one of `g++`, `javac`/`java`, or `python3` (depending
+on the language you chose), or to add those tools to your system PATH.
 
 Note that if you're using Python, `make compile` will do a bit of
 syntax checking but that's about it.
