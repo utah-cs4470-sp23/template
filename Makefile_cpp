@@ -1,0 +1,17 @@
+TEST=test.jpl
+
+all: run
+
+compile: compiler.o
+
+compiler.o: compiler.c
+	g++ --std=c++17 -Werror -Wall -c compiler.c -o compiler.o
+
+a.out: compiler.o
+	g++ compiler.o -o a.out
+
+run: a.out
+	./a.out $(TEST)
+
+clean:
+	rm -fr *.o a.out
