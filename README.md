@@ -35,8 +35,10 @@ compiler by running:
     make compile
 
 This should complete without errors. If you get an error, you likely
-need to install one of `g++`, `javac`/`java`, or `python3` (depending
-on the language you chose), or to add those tools to your system PATH.
+need to install one of `clang++`, `javac`/`java`, or `python3`
+(depending on the language you chose), or to add those tools to your
+system PATH. If you're having trouble with this step, please talk
+to your TA or one of your instructors.
 
 Note that if you're using Python, `make compile` will do a bit of
 syntax checking but that's about it.
