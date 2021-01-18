@@ -7,10 +7,10 @@ all: run
 compile: compiler.o
 
 compiler.o: compiler.cpp
-	clang++ $(CXXFLAGS) -c compiler.cpp -o compiler.o
+	g++ $(CXXFLAGS) -c compiler.cpp -o compiler.o
 
 a.out: compiler.o
-	clang++ $(CXXFLAGS) compiler.o -o a.out
+	g++ $(CXXFLAGS) compiler.o -o a.out
 
 run: a.out
 	./a.out $(TEST)
