@@ -1,5 +1,6 @@
 TEST=test.jpl
 
+CXX=clang++
 CXXFLAGS=-Og -std=c++17 -Werror -Wall -fsanitize=address,undefined -fno-sanitize-recover=address,undefined
 
 all: run
@@ -7,13 +8,13 @@ all: run
 compile: compiler.o
 
 compiler.o: compiler.cpp
-	g++ $(CXXFLAGS) -c compiler.cpp -o compiler.o
+	$(CXX) $(CXXFLAGS) -c compiler.cpp -o compiler.o
 
 a.out: compiler.o
-	g++ $(CXXFLAGS) compiler.o -o a.out
+	$(CXX) $(CXXFLAGS) compiler.o -o a.out
 
 run: a.out
 	./a.out $(TEST)
 
 clean:
-	rm -fr *.o a.out
+	rm -f *.o a.out
