@@ -69,9 +69,11 @@ Every time you push to this repository, it will compile your program
 and then auto-grade the current homework assignment. The auto-grader
 will roll over to the next week's assignment on Monday.
 
-The auto-grader works via Github Actions, which are configured in the
-`.github` folder. Do not edit any file in that folder. (Or you will
-fail future assignments!)
+In general, you can feel free to rename files and move them around,
+but the auto-grader works via Github Actions, which are configured in
+the `.github` folder. Do not edit any file in that folder. You will
+fail the assignment! Also do not create a folder called `grader`, that
+will break the autograder.
 
 Github actions will email you every time you push, if you fail a test.
 This will be most times you push, since "failing a test" just means
